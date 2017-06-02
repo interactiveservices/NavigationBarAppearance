@@ -1,0 +1,16 @@
+PODS:
+  - NavigationBarAppearance (0.1.0)
+
+DEPENDENCIES:
+  - NavigationBarAppearance (from `../`)
+
+EXTERNAL SOURCES:
+  NavigationBarAppearance:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NavigationBarAppearance: 9271a338b39f39dec3425bd1185d8755bdbf22fe
+
+PODFILE CHECKSUM: 9fd81af0fbc1f57dd1bd5a4a7c123ce053c64af9
+
+COCOAPODS: 1.2.1
