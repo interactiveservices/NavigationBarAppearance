@@ -22,10 +22,7 @@ let navigationBar = UINavigationBar.appearance()
 navigationBar.apply(attribute:NavigationBarAttribute.backgroundImage(#imageLiteral(resourceName: "NavigationBar")))
 
 - solidColor (globaly and in currentVC)
-navigationBar.apply(attribute:NavigationBarAttribute.plainColor(#colorLiteral(red: 0.06274510175, 
-                                                                            green: 0, 
-                                                                             blue: 0.1921568662, 
-                                                                            alpha: 1)))
+navigationBar.apply(attribute:NavigationBarAttribute.plainColor(#colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)))
 
 - titleAttributes (globaly and in currentVC)
 navigationBar.apply(attributes:[
@@ -48,12 +45,17 @@ self.naviagtionController?.navigationBar.apply(attribute:NavigationBarAttribute.
 ```swift
 IASNavigationController(rootViewController: UIViewController(), 
                         attributes: [NavigationBarAttribute.backButton(" GoBack",UIImage(named:"BackButton"))])
-
 ```
 
-UIBarButtonItem:
+Configure UIBarButtonItem:
 - barbuttonsTitleAttributes (globaly and in currentVC)
+and ect
 
+```swift
+let barButtonItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self])
+barButtonItem.apply(attributes: [NavigationBarAttribute.barButtonTitleFont(UIFont.systemFont(ofSize: 10)),
+NavigationBarAttribute.barButtonTitleColor(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))])
+```
 
 ## Requirements
 
