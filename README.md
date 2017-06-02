@@ -19,22 +19,22 @@ configure NavigationBar:
 
 let navigationBar = UINavigationBar.appearance()
 - image (globaly and in currentVC)
-navigationBar.apply(attribute:NavigationBarAttribute.backgroundImage(#imageLiteral(resourceName: "NavigationBar")))
+navigationBar.apply(attribute:.backgroundImage(UIImage(named:"NavigationBar")))
 
 - solidColor (globaly and in currentVC)
-navigationBar.apply(attribute:NavigationBarAttribute.plainColor(#colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)))
+navigationBar.apply(attribute:.plainColor(.blue)))
 
 - titleAttributes (globaly and in currentVC)
 navigationBar.apply(attributes:[
-    NavigationBarAttribute.titleColor(UIColor.red),
-    NavigationBarAttribute.titleFont(UIFont.boldSystemFont(ofSize: 20))
+    NavigationBarAttribute.titleColor(.red),
+    NavigationBarAttribute.titleFont(.boldSystemFont(ofSize: 20))
 ])
 ```
 
 - remove or set back shadow in on line of code
 
 ```swift
-self.naviagtionController?.navigationBar.apply(attribute:NavigationBarAttribute.showShadow(false))
+self.naviagtionController?.navigationBar.apply(attribute:.showShadow(false))
 
 ```
 
@@ -44,7 +44,7 @@ self.naviagtionController?.navigationBar.apply(attribute:NavigationBarAttribute.
 
 ```swift
 IASNavigationController(rootViewController: UIViewController(), 
-                        attributes: [NavigationBarAttribute.backButton(" GoBack",UIImage(named:"BackButton"))])
+                        attributes: [.backButton("GoBack",UIImage(named:"BackButton"))])
 ```
 
 Configure UIBarButtonItem:
@@ -53,8 +53,8 @@ and ect
 
 ```swift
 let barButtonItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self])
-barButtonItem.apply(attributes: [NavigationBarAttribute.barButtonTitleFont(UIFont.systemFont(ofSize: 10)),
-NavigationBarAttribute.barButtonTitleColor(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))])
+barButtonItem.apply(attributes: [.barButtonTitleFont(.systemFont(ofSize: 10)),
+                                 .barButtonTitleColor(.gree])
 ```
 
 ## Requirements
