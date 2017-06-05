@@ -9,9 +9,57 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Stop seraching stackoverflow and just do it in a few lines of code with declarative manner
+
+## Features
+
+configure NavigationBar:
+
+```swift
+
+let navigationBar = UINavigationBar.appearance()
+- image (globaly and in currentVC)
+navigationBar.apply(attribute:.backgroundImage(UIImage(named:"NavigationBar")))
+
+- solidColor (globaly and in currentVC)
+navigationBar.apply(attribute:.plainColor(.blue)))
+
+- titleAttributes (globaly and in currentVC)
+navigationBar.apply(attributes:[
+    NavigationBarAttribute.titleColor(.red),
+    NavigationBarAttribute.titleFont(.boldSystemFont(ofSize: 20))
+])
+```
+
+- remove or set back shadow in on line of code
+
+```swift
+self.naviagtionController?.navigationBar.apply(attribute:.showShadow(false))
+
+```
+
+- customise backbutton image and title for NavigationController subclass named IASNavigationController
+  subclass IASNavigationController or create it in code. Then before show it 
+  set it navigationBarAttributes property to anything you want
+
+```swift
+IASNavigationController(rootViewController: UIViewController(), 
+                        attributes: [.backButton("GoBack",UIImage(named:"BackButton"))])
+```
+
+Configure UIBarButtonItem:
+- barbuttonsTitleAttributes (globaly and in currentVC)
+and ect
+
+```swift
+let barButtonItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self])
+barButtonItem.apply(attributes: [.barButtonTitleFont(.systemFont(ofSize: 10)),
+                                 .barButtonTitleColor(.gree])
+```
+
 ## Requirements
 
-- iOS 7ls
+- iOS 7
 
 
 ## Installation

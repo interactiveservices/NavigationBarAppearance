@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NavigationBarAppearance'
-  s.version          = '0.5.0'
+  s.version          = '0.5.1'
   s.summary          = 'Easy way to customize navigationbar and barbuttonitem appearance of your viewcontroller or entire applcation in declarative manner'
 
 # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ s.description      = <<-DESC
   s.source           = { :git => 'https://github.com/interactiveservices/NavigationBarAppearance.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'NavigationBarAppearance/Classes/**/*'
   
