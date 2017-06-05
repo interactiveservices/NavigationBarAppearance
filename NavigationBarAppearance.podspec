@@ -32,7 +32,7 @@ s.description      = <<-DESC
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'nikolay.shubenkov@gmail.com' => 'n.shubenkov@be-interactive.ru' }
-  s.source           = { :git => 'https://github.com/interactiveservices/NavigationBarAppearance.git', :tag => 0.5 }
+  s.source           = { :git => 'https://github.com/interactiveservices/NavigationBarAppearance.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '7.0'
